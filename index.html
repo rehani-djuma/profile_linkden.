@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <!-- ============================================================
+       META & SEO
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rehani Djuma — Data Analyst Junior basé à Bujumbura, Burundi. Spécialisé en Excel, SQL, Power BI, Data Visualization et Dashboard Design." />
+  <meta name="keywords" content="Data Analyst, Power BI, SQL, Excel, Data Visualization, Bujumbura, Burundi, Rehani Djuma" />
+  <meta name="author" content="Rehani Djuma" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rehani Djuma — Data Analyst Junior" />
+  <meta property="og:description" content="Transforming raw data into strategic insights. Portfolio de Rehani Djuma, Data Analyst Junior." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rehani Djuma — Data Analyst Junior" />
+  <meta name="twitter:description" content="Transforming raw data into strategic insights." />
+
+  <title>Rehani Djuma — Data Analyst Junior</title>
+
+  <!-- ============================================================
+       FONTS — Syne (Display) + DM Sans (Body)
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       CURSOR CUSTOM
+  ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ============================================================
+       PRELOADER
+  ============================================================ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">RD</div>
+      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+      <span class="preloader__text">Chargement des données…</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__container">
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-bracket">[</span>RD<span class="nav__logo-bracket">]</span>
+      </a>
+
+      <!-- Links -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">À propos</a></li>
+        <li><a href="#skills" class="nav__link">Compétences</a></li>
+        <li><a href="#projects" class="nav__link">Projets</a></li>
+        <li><a href="#experience" class="nav__link">Parcours</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+
+      <!-- Controls -->
+      <div class="nav__controls">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger -->
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Animated grid background -->
+    <div class="hero__grid"></div>
+    <!-- Floating orbs -->
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+
+    <div class="container hero__inner">
+      <!-- Text content -->
+      <div class="hero__content" data-aos="fade-right">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Disponible pour de nouvelles opportunités
+        </div>
+
+        <h1 class="hero__title">
+          Bonjour, je suis<br />
+          <span class="hero__name">Rehani Djuma</span>
+        </h1>
+
+        <div class="hero__subtitle">
+          <span class="hero__subtitle-static">Je transforme les données en&nbsp;</span>
+          <span class="hero__typing" id="typingText"></span><span class="hero__cursor">|</span>
+        </div>
+
+        <p class="hero__description">
+          Data Analyst Junior passionné par la transformation de données brutes en insights stratégiques. 
+          Basé à Bujumbura, Burundi — prêt à créer de la valeur à travers l'analyse de données.
+        </p>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-num">4+</span>
+            <span class="hero__stat-label">Projets réalisés</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">3+</span>
+            <span class="hero__stat-label">Outils maîtrisés</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">2</span>
+            <span class="hero__stat-label">Langues</span>
+          </div>
+        </div>
+
+        <div class="hero__actions">
+          <a href="#" class="btn btn--primary" download>
+            <i class="fa-solid fa-download"></i>
+            Télécharger CV
+          </a>
+          <a href="#contact" class="btn btn--ghost">
+            <i class="fa-solid fa-paper-plane"></i>
+            Me contacter
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile visual -->
+      <div class="hero__visual" data-aos="fade-left">
+        <div class="hero__photo-wrapper">
+          <div class="hero__photo-ring hero__photo-ring--1"></div>
+          <div class="hero__photo-ring hero__photo-ring--2"></div>
+          <div class="hero__photo-placeholder">
+            <span>RD</span>
+          </div>
+          <!-- Floating data chips -->
+          <div class="hero__chip hero__chip--1">
+            <i class="fa-solid fa-chart-line"></i> Power BI
+          </div>
+          <div class="hero__chip hero__chip--2">
+            <i class="fa-solid fa-database"></i> SQL
+          </div>
+          <div class="hero__chip hero__chip--3">
+            <i class="fa-solid fa-table"></i> Excel
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll">
+      <div class="hero__scroll-wheel"></div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">01 / À propos</span>
+        <h2 class="section-title">Qui suis-je<span class="accent">?</span></h2>
+      </div>
+
+      <div class="about__grid">
+        <!-- Left: visual card -->
+        <div class="about__card" data-aos="fade-right">
+          <div class="about__card-inner">
+            <div class="about__avatar">RD</div>
+            <h3 class="about__name">Rehani Djuma</h3>
+            <p class="about__role">Data Analyst Junior</p>
+            <div class="about__info-list">
+              <div class="about__info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Bujumbura, Burundi</span>
+              </div>
+              <div class="about__info-item">
+                <i class="fa-solid fa-flag"></i>
+                <span>Originaire d'Uvira, RDC</span>
+              </div>
+              <div class="about__info-item">
+                <i class="fa-solid fa-language"></i>
+                <span>Français &amp; Anglais</span>
+              </div>
+              <div class="about__info-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Open to work</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: text -->
+        <div class="about__text" data-aos="fade-left">
+          <p class="about__lead">
+            Passionné par la <strong>puissance des données</strong>, je transforme des ensembles de données complexes en visualisations claires et en insights actionnables qui soutiennent la prise de décision stratégique.
+          </p>
+          <p>
+            Issu d'Uvira (RDC) et actuellement basé à Bujumbura (Burundi), j'ai développé une solide expertise en analyse de données, maîtrisant des outils comme <strong>Excel, SQL et Power BI</strong>. Mon approche combine rigueur analytique et sens du storytelling visuel.
+          </p>
+          <p>
+            Mon objectif est de contribuer à des organisations qui valorisent la donnée comme levier de croissance, en apportant des analyses pertinentes, des dashboards intuitifs et une vraie culture data.
+          </p>
+
+          <!-- Values -->
+          <div class="about__values">
+            <div class="about__value">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+              <div>
+                <strong>Rigueur analytique</strong>
+                <span>Chaque décision mérite d'être basée sur des données fiables.</span>
+              </div>
+            </div>
+            <div class="about__value">
+              <i class="fa-solid fa-eye"></i>
+              <div>
+                <strong>Clarté visuelle</strong>
+                <span>Les données parlent mieux quand elles sont bien présentées.</span>
+              </div>
+            </div>
+            <div class="about__value">
+              <i class="fa-solid fa-rocket"></i>
+              <div>
+                <strong>Curiosité continue</strong>
+                <span>Toujours en apprentissage, toujours en amélioration.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+  ============================================================ -->
+  <section class="skills section section--alt" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">02 / Compétences</span>
+        <h2 class="section-title">Mon arsenal<span class="accent"> data</span></h2>
+      </div>
+
+      <!-- Skill cards -->
+      <div class="skills__grid">
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-file-excel"></i>
+          </div>
+          <h3 class="skill-card__title">Excel</h3>
+          <p class="skill-card__desc">Tableaux croisés dynamiques, formules avancées (INDEX/MATCH, VLOOKUP), Power Query, macros VBA.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="88"></div>
+          </div>
+          <span class="skill-card__pct">88%</span>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="skill-card__title">SQL</h3>
+          <p class="skill-card__desc">Requêtes complexes, JOINs, sous-requêtes, agrégations, optimisation de bases de données relationnelles.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="82"></div>
+          </div>
+          <span class="skill-card__pct">82%</span>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-chart-bar"></i>
+          </div>
+          <h3 class="skill-card__title">Power BI</h3>
+          <p class="skill-card__desc">Modélisation de données, DAX, création de rapports interactifs, Power Query M, publication de dashboards.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="80"></div>
+          </div>
+          <span class="skill-card__pct">80%</span>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h3 class="skill-card__title">Data Visualization</h3>
+          <p class="skill-card__desc">Storytelling visuel, choix du graphique adapté, palette de couleurs, hiérarchie d'information.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="85"></div>
+          </div>
+          <span class="skill-card__pct">85%</span>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-broom"></i>
+          </div>
+          <h3 class="skill-card__title">Data Cleaning</h3>
+          <p class="skill-card__desc">Détection d'anomalies, traitement des doublons et valeurs manquantes, normalisation de données.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="90"></div>
+          </div>
+          <span class="skill-card__pct">90%</span>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-table-columns"></i>
+          </div>
+          <h3 class="skill-card__title">Dashboard Design</h3>
+          <p class="skill-card__desc">Conception d'interfaces analytiques intuitives, KPIs stratégiques, tableaux de bord exécutifs.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="78"></div>
+          </div>
+          <span class="skill-card__pct">78%</span>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="480">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <h3 class="skill-card__title">Reporting</h3>
+          <p class="skill-card__desc">Rapports hebdomadaires, mensuels et annuels. Automatisation et templates dynamiques.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="83"></div>
+          </div>
+          <span class="skill-card__pct">83%</span>
+        </div>
+
+        <div class="skill-card skill-card--wide" data-aos="fade-up" data-aos-delay="560">
+          <div class="skill-card__icon">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="skill-card__title">Analyse de données</h3>
+          <p class="skill-card__desc">Analyse exploratoire, identification de tendances, corrélations, segmentation et insights business actionnables à partir de données structurées.</p>
+          <div class="skill-card__bar">
+            <div class="skill-card__fill" data-width="86"></div>
+          </div>
+          <span class="skill-card__pct">86%</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">03 / Projets</span>
+        <h2 class="section-title">Mes réalisations<span class="accent"> data</span></h2>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="projects__filters" data-aos="fade-up">
+        <button class="filter-btn filter-btn--active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="powerbi">Power BI</button>
+        <button class="filter-btn" data-filter="excel">Excel</button>
+        <button class="filter-btn" data-filter="sql">SQL</button>
+      </div>
+
+      <!-- Projects grid -->
+      <div class="projects__grid" id="projectsGrid">
+
+        <!-- Project 1 -->
+        <article class="project-card" data-category="powerbi" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card__visual">
+            <div class="project-card__preview project-card__preview--1">
+              <div class="preview__bars">
+                <div class="preview__bar" style="--h:60%"></div>
+                <div class="preview__bar" style="--h:85%"></div>
+                <div class="preview__bar" style="--h:45%"></div>
+                <div class="preview__bar" style="--h:95%"></div>
+                <div class="preview__bar" style="--h:70%"></div>
+                <div class="preview__bar" style="--h:55%"></div>
+              </div>
+              <div class="preview__line"></div>
+              <div class="preview__kpis">
+                <span>+24%</span><span>1.2M</span><span>KPI</span>
+              </div>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Voir le projet
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--powerbi">Power BI</span>
+              <span class="tag tag--sql">SQL</span>
+            </div>
+            <h3 class="project-card__title">Dashboard Ventes National</h3>
+            <p class="project-card__desc">
+              Dashboard interactif de suivi des ventes pour une entreprise de distribution. KPIs en temps réel, analyse régionale, tendances mensuelles et alertes de performance.
+            </p>
+            <div class="project-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> 2024</span>
+              <span><i class="fa-solid fa-chart-line"></i> Business Intelligence</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-category="excel" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card__visual">
+            <div class="project-card__preview project-card__preview--2">
+              <div class="preview__table">
+                <div class="preview__table-row preview__table-row--header">
+                  <span>Période</span><span>Revenu</span><span>Var%</span>
+                </div>
+                <div class="preview__table-row">
+                  <span>Q1</span><span>412K</span><span class="pos">+8%</span>
+                </div>
+                <div class="preview__table-row">
+                  <span>Q2</span><span>538K</span><span class="pos">+31%</span>
+                </div>
+                <div class="preview__table-row">
+                  <span>Q3</span><span>491K</span><span class="neg">-9%</span>
+                </div>
+                <div class="preview__table-row">
+                  <span>Q4</span><span>672K</span><span class="pos">+37%</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Voir le projet
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--excel">Excel</span>
+              <span class="tag tag--analysis">Analyse Financière</span>
+            </div>
+            <h3 class="project-card__title">Analyse Financière Annuelle</h3>
+            <p class="project-card__desc">
+              Modèle financier complet avec tableaux de bord dynamiques, analyse trimestrielle des revenus, calcul des marges, prévisions et rapports automatisés via Power Query.
+            </p>
+            <div class="project-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> 2024</span>
+              <span><i class="fa-solid fa-coins"></i> Finance</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-category="sql" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card__preview project-card__preview--3">
+            <div class="project-card__visual">
+              <div class="preview__code">
+                <span class="kw">SELECT</span> c.segment,<br/>
+                &nbsp;&nbsp;<span class="fn">COUNT</span>(orders.id) <span class="kw">AS</span> total,<br/>
+                &nbsp;&nbsp;<span class="fn">AVG</span>(orders.value) <span class="kw">AS</span> avg_val<br/>
+                <span class="kw">FROM</span> clients c<br/>
+                <span class="kw">JOIN</span> orders <span class="kw">ON</span> c.id = orders.client_id<br/>
+                <span class="kw">GROUP BY</span> c.segment<br/>
+                <span class="kw">ORDER BY</span> total <span class="kw">DESC</span>;
+              </div>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Voir le projet
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--sql">SQL</span>
+              <span class="tag tag--analysis">Data Analysis</span>
+            </div>
+            <h3 class="project-card__title">Analyse Base Clients SQL</h3>
+            <p class="project-card__desc">
+              Analyse complète d'une base de données clients : segmentation RFM, identification des clients à risque, calcul du LTV et recommandations de fidélisation basées sur les données.
+            </p>
+            <div class="project-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> 2023</span>
+              <span><i class="fa-solid fa-users"></i> CRM Analytics</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card" data-category="powerbi" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card__visual">
+            <div class="project-card__preview project-card__preview--4">
+              <div class="preview__chart-donut">
+                <svg viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(0,255,200,0.15)" stroke-width="14"/>
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="var(--accent)" stroke-width="14" stroke-dasharray="70 150" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="var(--accent-2)" stroke-width="14" stroke-dasharray="40 150" stroke-linecap="round" transform="rotate(68 50 50)"/>
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#8b5cf6" stroke-width="14" stroke-dasharray="50 150" stroke-linecap="round" transform="rotate(164 50 50)"/>
+                  <text x="50" y="54" text-anchor="middle" font-size="12" fill="white" font-weight="700">67%</text>
+                </svg>
+              </div>
+              <div class="preview__legend">
+                <span><i class="fa-solid fa-circle" style="color:var(--accent)"></i> Afrique</span>
+                <span><i class="fa-solid fa-circle" style="color:var(--accent-2)"></i> Europe</span>
+                <span><i class="fa-solid fa-circle" style="color:#8b5cf6"></i> Asie</span>
+              </div>
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-card__link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Voir le projet
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--powerbi">Power BI</span>
+              <span class="tag tag--excel">Excel</span>
+            </div>
+            <h3 class="project-card__title">Tendances Commerciales Globales</h3>
+            <p class="project-card__desc">
+              Analyse des tendances commerciales sur 3 marchés (Afrique, Europe, Asie) : évolution des parts de marché, croissance sectorielle et prévisions à 12 mois.
+            </p>
+            <div class="project-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> 2023</span>
+              <span><i class="fa-solid fa-globe"></i> Market Analysis</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE / EDUCATION
+  ============================================================ -->
+  <section class="experience section section--alt" id="experience">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">04 / Parcours</span>
+        <h2 class="section-title">Formation &amp;<span class="accent"> Certifications</span></h2>
+      </div>
+
+      <div class="timeline__wrapper">
+        <div class="timeline__line"></div>
+
+        <!-- Item 1 -->
+        <div class="timeline__item timeline__item--left" data-aos="fade-right">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <span class="timeline__badge timeline__badge--edu">
+                <i class="fa-solid fa-graduation-cap"></i> Formation
+              </span>
+              <span class="timeline__date">2021 – 2024</span>
+            </div>
+            <h3 class="timeline__title">Licence en Informatique de Gestion</h3>
+            <p class="timeline__org"><i class="fa-solid fa-building-columns"></i> Université du Burundi, Bujumbura</p>
+            <p class="timeline__desc">Formation axée sur les systèmes d'information, les bases de données, la gestion de projets informatiques et l'analyse quantitative des données d'entreprise.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline__item timeline__item--right" data-aos="fade-left">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <span class="timeline__badge timeline__badge--cert">
+                <i class="fa-solid fa-certificate"></i> Certification
+              </span>
+              <span class="timeline__date">2024</span>
+            </div>
+            <h3 class="timeline__title">Microsoft Power BI Data Analyst (PL-300)</h3>
+            <p class="timeline__org"><i class="fa-brands fa-microsoft"></i> Microsoft Learn</p>
+            <p class="timeline__desc">Certification officielle couvrant la modélisation des données, la création de rapports avec DAX, et la publication de dashboards interactifs dans Power BI Service.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline__item timeline__item--left" data-aos="fade-right">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <span class="timeline__badge timeline__badge--cert">
+                <i class="fa-solid fa-certificate"></i> Certification
+              </span>
+              <span class="timeline__date">2023</span>
+            </div>
+            <h3 class="timeline__title">Google Data Analytics Professional Certificate</h3>
+            <p class="timeline__org"><i class="fa-brands fa-google"></i> Google / Coursera</p>
+            <p class="timeline__desc">Programme complet en 8 cours couvrant l'analyse de données, SQL, R, la visualisation et le processus analytique end-to-end avec des projets pratiques.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline__item timeline__item--right" data-aos="fade-left">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <span class="timeline__badge timeline__badge--work">
+                <i class="fa-solid fa-briefcase"></i> Expérience
+              </span>
+              <span class="timeline__date">2024 – Présent</span>
+            </div>
+            <h3 class="timeline__title">Data Analyst — Stage &amp; Projets Freelance</h3>
+            <p class="timeline__org"><i class="fa-solid fa-chart-simple"></i> Projets indépendants, Bujumbura</p>
+            <p class="timeline__desc">Réalisation de dashboards Power BI pour des PME locales, nettoyage et analyse de données commerciales, création de rapports automatisés sous Excel.</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="timeline__item timeline__item--left" data-aos="fade-right">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <span class="timeline__badge timeline__badge--cert">
+                <i class="fa-solid fa-certificate"></i> Certification
+              </span>
+              <span class="timeline__date">2023</span>
+            </div>
+            <h3 class="timeline__title">SQL for Data Science</h3>
+            <p class="timeline__org"><i class="fa-solid fa-database"></i> UC Davis / Coursera</p>
+            <p class="timeline__desc">Maîtrise des requêtes SQL avancées, des jointures complexes, des sous-requêtes et de l'optimisation des requêtes pour l'analyse de données volumineuses.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES SECTION
+  ============================================================ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">05 / Services</span>
+        <h2 class="section-title">Ce que je<span class="accent"> propose</span></h2>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-card__number">01</div>
+          <div class="service-card__icon">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="service-card__title">Analyse de données</h3>
+          <p class="service-card__desc">
+            Exploration, nettoyage et analyse approfondie de vos données pour extraire des insights actionnables. Identification de tendances, corrélations et anomalies.
+          </p>
+          <div class="service-card__features">
+            <span><i class="fa-solid fa-check"></i> Analyse exploratoire</span>
+            <span><i class="fa-solid fa-check"></i> Segmentation</span>
+            <span><i class="fa-solid fa-check"></i> Rapport d'insights</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card__number">02</div>
+          <div class="service-card__icon">
+            <i class="fa-solid fa-chart-bar"></i>
+          </div>
+          <h3 class="service-card__title">Dashboards Power BI</h3>
+          <p class="service-card__desc">
+            Conception et développement de tableaux de bord interactifs sous Power BI. Rapports dynamiques connectés à vos sources de données avec rafraîchissement automatique.
+          </p>
+          <div class="service-card__features">
+            <span><i class="fa-solid fa-check"></i> Rapports interactifs</span>
+            <span><i class="fa-solid fa-check"></i> DAX avancé</span>
+            <span><i class="fa-solid fa-check"></i> Publication en ligne</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card__number">03</div>
+          <div class="service-card__icon">
+            <i class="fa-solid fa-broom"></i>
+          </div>
+          <h3 class="service-card__title">Nettoyage de données</h3>
+          <p class="service-card__desc">
+            Transformation de données brutes, désordonnées ou incomplètes en jeux de données propres, cohérents et prêts à l'analyse. ETL et Power Query.
+          </p>
+          <div class="service-card__features">
+            <span><i class="fa-solid fa-check"></i> Déduplication</span>
+            <span><i class="fa-solid fa-check"></i> Normalisation</span>
+            <span><i class="fa-solid fa-check"></i> Validation qualité</span>
+          </div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card__number">04</div>
+          <div class="service-card__icon">
+            <i class="fa-solid fa-file-excel"></i>
+          </div>
+          <h3 class="service-card__title">Rapports Excel</h3>
+          <p class="service-card__desc">
+            Création de modèles Excel avancés, tableaux de bord dynamiques, rapports automatisés et systèmes de suivi de KPIs adaptés à votre activité.
+          </p>
+          <div class="service-card__features">
+            <span><i class="fa-solid fa-check"></i> Templates dynamiques</span>
+            <span><i class="fa-solid fa-check"></i> Automatisation</span>
+            <span><i class="fa-solid fa-check"></i> Formules avancées</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">06 / Contact</span>
+        <h2 class="section-title">Travaillons<span class="accent"> ensemble</span></h2>
+      </div>
+
+      <div class="contact__grid">
+
+        <!-- Info -->
+        <div class="contact__info" data-aos="fade-right">
+          <p class="contact__intro">
+            Vous avez un projet data ? Besoin d'un dashboard ou d'une analyse ? Je suis disponible et motivé pour collaborer.
+          </p>
+
+          <div class="contact__details">
+            <a href="mailto:rehani.djuma@email.com" class="contact__detail">
+              <div class="contact__detail-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <span class="contact__detail-label">Email</span>
+                <span class="contact__detail-value">rehanimayundo@email.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+25764584437" class="contact__detail">
+              <div class="contact__detail-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <span class="contact__detail-label">Téléphone</span>
+                <span class="contact__detail-value">+257 645 837</span>
+              </div>
+            </a>
+
+            <div class="contact__detail">
+              <div class="contact__detail-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="contact__detail-label">Localisation</span>
+                <span class="contact__detail-value">Bujumbura, Burundi · Uvira, RDC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="contact__socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact__form-wrapper" data-aos="fade-left">
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName" class="form-label">Nom complet</label>
+              <div class="form-input-wrapper">
+                <i class="fa-solid fa-user form-icon"></i>
+                <input type="text" id="contactName" name="name" placeholder="Votre nom" class="form-input" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">Adresse email</label>
+              <div class="form-input-wrapper">
+                <i class="fa-solid fa-envelope form-icon"></i>
+                <input type="email" id="contactEmail" name="email" placeholder="votre@email.com" class="form-input" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject" class="form-label">Sujet</label>
+              <div class="form-input-wrapper">
+                <i class="fa-solid fa-tag form-icon"></i>
+                <input type="text" id="contactSubject" name="subject" placeholder="Objet de votre message" class="form-input" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Message</label>
+              <div class="form-input-wrapper form-input-wrapper--textarea">
+                <i class="fa-solid fa-message form-icon form-icon--textarea"></i>
+                <textarea id="contactMessage" name="message" placeholder="Décrivez votre projet ou votre besoin…" class="form-input form-textarea" rows="5" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">
+              <i class="fa-solid fa-paper-plane"></i>
+              Envoyer le message
+            </button>
+
+            <!-- Success message -->
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              Message envoyé avec succès ! Je vous répondrai sous 24h.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#hero" class="nav__logo">
+            <span class="nav__logo-bracket">[</span>RD<span class="nav__logo-bracket">]</span>
+          </a>
+          <p class="footer__slogan">Transforming raw data into strategic insights.</p>
+        </div>
+
+        <div class="footer__links">
+          <a href="#about">À propos</a>
+          <a href="#skills">Compétences</a>
+          <a href="#projects">Projets</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer__socials">
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 <strong>Rehani Djuma</strong>. Tous droits réservés.</p>
+        <p>Conçu avec <i class="fa-solid fa-heart" style="color:var(--accent)"></i> et passion pour la data.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
